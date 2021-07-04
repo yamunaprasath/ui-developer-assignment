@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>UI Developer - Assessment</title>
+	<script src="https://kit.fontawesome.com/e9c4f62587.js" crossorigin="anonymous"></script>
+    <style>
+		@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Roboto Slab', serif;
+}
+body{
+	background:#f2f2f2;
+	font-family: 'Roboto Slab', serif;
+}
+/* .main{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%); 
+} */
+.upload-box {
+    background-color: #fff;
+    width: 160px;
+    height: 125PX;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 0;
+}
+input{
+	height: 35px;
+	width: 800px;
+	border-radius:10px;
+	padding: 0px 10px;
+	border: none;
+
+}
+::placeholder {
+	color: #798590;
+	opacity: 1;
+	font-size: 12px;
+	font-weight:bold;
+}
+.navbar{
+ position: sticky;
+	width: 100%;
+	height: 95px;
+	background:#ffffff;
+}
+.sidebar{
+	position:fixed;
+	width: 100px;
+	height: 100%;
+    left: 0;
+	top: 0;
+	background:#ffffff;
+	box-shadow:0 10px 10px 0 rgba(0,0,0,0.5);
+
+}
+ul {
+	
+    font-size: 12px;
+
+}
+li i {
+    font-size: 20px;
+    margin: 5px 0px;
+}
+ul li a {
+		   display: flex;
+		   flex-direction: column;
+		   justify-content: center;
+		   align-items: center;
+		   padding: 13px 0;
+		   color: #798590;
+
+}
+ul li a:hover {
+	background-color: #cce6ff;
+	border-left: 3px solid #1a90ff;
+
+}
+.active{
+	background-color: #cce6ff;
+	color: #000;
+	text-align: center;
+	border-left: 3px solid #1a90ff;
+	font-weight: bold;
+}
+.active .font-icon {
+	color: #000 !important;
+}
+.font-icon {
+	color: #798590;
+	opacity: .8;
+
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href=""></a>
+    </div>
+   
+
+	<div class="main" style="position: relative;">
+        <div class="video-icon" style="position: absolute; left: 7%; margin: 30px 34px; font-weight: 600; font-family: roboto;">
+            <p style="text-align: center; color: #798590;"><i class="fas fa-play" style="transform: rotate( 59deg ); text-align: center; margin: auto 0; font-size: 12px;"></i> videos</p>
+        </div>
+        <div style="position: absolute;left: 16%; margin-top: 83px;width: 83%;">
+            <input type="text" name="box" placeholder="Insert URL here" style="width: 85%;outline: none;">
+            <div class="" style="text-align: center;margin-top: 30px; font-size: 14px; font-weight: 600;width: 85%;">or</div>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+			<div style="background-color: #fff; width: 110px; height: 100px; padding: 30px 20px; border-radius: 6px;">
+				  <label for="files" class="btn" style="text-align: center; display: flex; justify-content: center; align-items: center; margin: auto 0; height: 100%; font-size: 14px; font-weight: 600;">upload</label>
+				  <input id="files" style="visibility:hidden;" type="file">
+				</div>
+        </div>
+	
+</div>
+		
+		<div class="sidebar">
+			<a href="">
+				<img src="C:\Users\buvan\Downloads\logo.jpeg" style="width: 100%;" alt="logo"/>
+			</a>
+			<ul>
+				<li><a href="#"><i class="fas fa-user font-icon"></i><span class="text">students</span></a></li>
+				<li><a class="active" href="#"><i class="fas fa-book font-icon"></i><span class="text">Lesson Plan</span></a></li>
+				<li><a href="#"><i class="fas fa-cog font-icon"></i><span class="text">Settings</span></a></li>
+			</ul>
+		</div>
+
+		<script>
+			document.getElementById("files").change(function() {
+  filename = this.files[0].name
+  console.log(filename);
+});
+		</script>
+</body>
+</html>
